@@ -1,14 +1,98 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <title>Page Title</title>
-    <meta charset="UTF-8" />
-    
-        </head>
-    <body>
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph.</p>
-        ซาน
-        
-    </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Kittitat| Workshop #HTML-FORM</title>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center;">
+        <h1 style="text-align: center;">Workshop #HTML-FORM</h1>
+    </div>
+    <div class="form">
+        <form>
+            <table>
+                <tr>
+                    <td><label>ชื่อ</label></td>
+                    <td><input type="text" name="name" placeholder="กรอกชื่อ"></td>
+                </tr>
+                <tr>
+                    <td><label>สกุล</label></td>
+                    <td><input type="text" name="lastname" placeholder="กรอกนามสกุล"></td>
+                </tr>
+                <tr>
+                    <td><label>วัน/เดือน/ปีเกิด</label></td>
+                    <td><input placeholder="dd/mm/yyyy"></td>
+                </tr>
+                <tr>
+                    <td><label>อายุ</label></td>
+                    <td><input type="number" name="age" placeholder="กรอกอายุ"></td>
+                </tr>
+                <tr>
+                    <td><label>เพศ</label></td>
+                    <td>
+                        <input type="radio" id="gender-male" name="gender" value="male">
+                        <label for="gender-male">ชาย</label>
+                        <input type="radio" id="gender-female" name="gender" value="female">
+                        <label for="gender-female">หญิง</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>รูป</label></td>
+                    <td><input type="file" id="picture" name="picture"></td>
+                </tr>
+                <tr>
+                    <td><label>ที่อยู่</label></td>
+                    <td><textarea id="address" cols="40" rows="4" name="address" placeholder="กรอกที่อยู่"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label>สีที่ชอบ</label></td>
+                    <td>
+                        <select id="fav-color" name="fav-color">
+                            <option selected="true" disabled="disabled">เลือก</option> 
+                            <option value="purple">ม่วง</option>
+                            <option value="blue">น้ำเงิน</option>
+                            <option value="skyblue">ฟ้า</option>
+                            <option value="green">เขียว</option>
+                            <option value="yellow">เหลือง</option>
+                            <option value="orange">ส้ม</option>
+                            <option value="red">แดง</option>
+                            <option value="pink">ชมพู</option>
+                            <option value="gray">เทา</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>แนวเพลงที่ชอบ</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="genre-forlife" name="genre" value="forlife">
+                        <label for="genre-forlife">เพื่อชีวิต</label>
+                        <input type="radio" id="genre-country" name="genre" value="country">
+                        <label for="genre-country">ลูกทุ่ง</label>
+                        <input type="radio" id="genre-other" name="genre" value="other">
+                        <label for="genre-other">อื่นๆ</label>
+                    </td>
+                </tr> 
+            </table><br>
+            <div style="display: flex; ">
+                <input type="checkbox" id="form-accept" name="accept">
+                <label for="form-accept">ยินยอมให้เก็บข้อมูล</label>
+            </div>
+            <br>
+            <div style="display: flex;  gap: 1rem; margin-top: 1rem;">
+                <button type="reset" style="background-color: white; border: 1px solid black; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">Reset</button>
+                <button type="submit" style="background-color: white; border: 1px solid black; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
 </html>
