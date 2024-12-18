@@ -5,115 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <title>Kittitat| Workshop #HTML-FORM</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link  href="css/bootstrap.min.css" rel="stylesheet">
-<script src="js/bootstrap.min.js"></script>
-
+    <title>Kittitat | Workshop #HTML-FORM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
-
-    <!-- <div style="display: flex; justify-content: center;">
-        <h1 style="text-align: center;">Workshop #HTML-FORM</h1>
-    </div> -->
-
-    <div class="form">
-        <form>
-            <h1 style="text-align: center;">Workshop #HTML-FORM</h1>
-            <table>
-                <tr>
-                    <td><label>ชื่อ</label></td>
-                    <td><input type="text" name="name" placeholder="กรอกชื่อ"></td>
-
-                </tr>
-                <tr>
-                    <td><label>สกุล</label></td>
-                    <td><input type="text" name="lastname" placeholder="กรอกนามสกุล"></td>
-                </tr>
-                <tr>
-                    <td><label>วัน/เดือน/ปีเกิด</label></td>
-                    <td><input placeholder="dd/mm/yyyy"></td>
-                </tr>
-                <tr>
-                    <td><label>อายุ</label></td>
-                    <td><input type="number" name="age" placeholder="กรอกอายุ"></td>
-                </tr>
-                <tr>
-                    <td><label>เพศ</label></td>
-                    <td>
+    <div class="container custom-container">
+    <form>
+        <h1 class="text-center mb-4">Workshop #HTML-FORM</h1>
+        <table class="table table-borderless">
+            <tr>
+                <td><label>ชื่อ</label></td>
+                <td><input type="text" class="form-control" name="name" placeholder="กรอกชื่อ"></td>
+            </tr>
+            <tr>
+                <td><label>สกุล</label></td>
+                <td><input type="text" class="form-control" name="lastname" placeholder="กรอกนามสกุล"></td>
+            </tr>
+            <tr>
+                <td><label>วัน/เดือน/ปีเกิด</label></td>
+                <td><input type="date" class="form-control"></td>
+            </tr>
+            <tr>
+                <td><label>อายุ</label></td>
+                <td><input type="number" class="form-control" name="age" placeholder="กรอกอายุ"></td>
+            </tr>
+            <tr>
+                <td><label>เพศ</label></td>
+                <td>
+                    <div>
                         <input type="radio" id="gender-male" name="gender" value="male">
                         <label for="gender-male">ชาย</label>
                         <input type="radio" id="gender-female" name="gender" value="female">
                         <label for="gender-female">หญิง</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>รูป</label></td>
-                    <td><input type="file" id="picture" name="picture"></td>
-                </tr>
-                <tr>
-                    <td><label>ที่อยู่</label></td>
-                    <td><textarea id="address" cols="40" rows="4" name="address" placeholder="กรอกที่อยู่"></textarea></td>
-                </tr>
-                <tr>
-                    <td><label>สีที่ชอบ</label></td>
-                    <td>
-                        <select id="fav-color" name="fav-color">
-                            <option selected="true" disabled="disabled">เลือก</option> 
-                            <option value="purple">ม่วง</option>
-                            <option value="blue">น้ำเงิน</option>
-                            <option value="skyblue">ฟ้า</option>
-                            <option value="green">เขียว</option>
-                            <option value="yellow">เหลือง</option>
-                            <option value="orange">ส้ม</option>
-                            <option value="red">แดง</option>
-                            <option value="pink">ชมพู</option>
-                            <option value="gray">เทา</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>แนวเพลงที่ชอบ</label>
-                    </td>
-                    <td>
-                        <input type="radio" id="genre-forlife" name="genre" value="forlife">
-                        <label for="genre-forlife">เพื่อชีวิต</label>
-                        <input type="radio" id="genre-country" name="genre" value="country">
-                        <label for="genre-country">ลูกทุ่ง</label>
-                        <input type="radio" id="genre-other" name="genre" value="other">
-                        <label for="genre-other">อื่นๆ</label>
-                    </td>
-                </tr> 
-            </table><br>
-            <div style="display: flex; ">
-                <input type="checkbox" id="form-accept" name="accept">
-                <label for="form-accept">ยินยอมให้เก็บข้อมูล</label>
-            </div>
-            <br>
-            <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">submit</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label>รูป</label></td>
+                <td><input type="file" class="form-control" id="picture" name="picture"></td>
+            </tr>
+            <tr>
+                <td><label>ที่อยู่</label></td>
+                <td><textarea id="address" class="form-control" rows="3" name="address" placeholder="กรอกที่อยู่"></textarea></td>
+            </tr>
+            <tr>
+                <td><label>สีที่ชอบ</label></td>
+                <td>
+                    <select id="fav-color" class="form-select" name="fav-color">
+                        <option selected disabled>เลือก</option>
+                        <option value="purple">ม่วง</option>
+                        <option value="blue">น้ำเงิน</option>
+                        <option value="green">เขียว</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="form-accept" name="accept">
+            <label for="form-accept" class="form-check-label">ยินยอมให้เก็บข้อมูล</label>
+        </div>
+        <div class="d-flex justify-content-center gap-2">
+            <button type="reset" class="btn btn-outline-secondary">Reset</button>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
 
-            <div style="display: flex;  justify-content: center; gap: 1rem; margin-top: 1rem;">
-                <!-- <button type="reset" style="background-color: white; border: 1px solid black; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">Reset</button>
-                <button type="submit" style="background-color: white; border: 1px solid black; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">Submit</button> -->
-                <button type="button" class="btn btn-secondary">reset</button>
-                <button type="button" class="btn btn-success">submit</button>
-            </div>
-
-        </form>
-    </div>
 </body>
 
 </html>
